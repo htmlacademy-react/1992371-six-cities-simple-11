@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import WelcomeScreen from './pages/welcome-screen/welcome-screen';
-/* import App from './components/app/app'; */
+import WelcomeScreen from './pages/main/main';
+/* import App from './components/app-card'; */
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 
+const Setting = {
+  AmountRent: 4,
+} as const;
+
 root.render(
   <React.StrictMode>
-    <WelcomeScreen />
+    <WelcomeScreen
+      AmountRent= {Setting.AmountRent}
+    />
   </React.StrictMode>,
 );
