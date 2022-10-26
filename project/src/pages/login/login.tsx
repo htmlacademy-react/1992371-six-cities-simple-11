@@ -1,4 +1,4 @@
-function Login() {
+export function Login() {
   return (
     <body>
       <div className="page page--gray page--login">
@@ -47,5 +47,3 @@ function Login() {
     </body>
   );
 }
-
-export default Login;
