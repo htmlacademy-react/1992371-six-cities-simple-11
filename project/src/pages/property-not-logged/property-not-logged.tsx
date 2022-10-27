@@ -1,4 +1,4 @@
-function PropertyNotLogged () {
+export function PropertyNotLogged () {
   return (
     <body>
       <div className="page">
@@ -260,5 +260,3 @@ function PropertyNotLogged () {
     </body>
   );
 }
-
-export default PropertyNotLogged;

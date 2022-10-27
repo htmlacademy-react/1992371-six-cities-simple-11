@@ -1,4 +1,4 @@
-function Property() {
+export function Property() {
   return (
     <body>
       <header className="header">
@@ -310,5 +310,3 @@ function Property() {
     </body>
   );
 }
-
-export default Property;

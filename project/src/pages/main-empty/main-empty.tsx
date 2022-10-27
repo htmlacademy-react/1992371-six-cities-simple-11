@@ -1,4 +1,4 @@
-function MainEmpty() {
+export function MainEmpty() {
   return (
     <body className="page page--gray page--main">
       <div style={ {display: 'none'} }>
@@ -239,4 +239,3 @@ function MainEmpty() {
   );
 }
 
-export default MainEmpty;
