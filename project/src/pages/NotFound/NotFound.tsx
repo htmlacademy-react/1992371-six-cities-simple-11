@@ -1,4 +1,6 @@
-export function NotFound() {
+import { Link } from 'react-router-dom';
+
+export function NotFound(): JSX.Element {
   return (
     <section>
       <div className="not-found__container">
@@ -6,7 +8,7 @@ export function NotFound() {
         <span className="not-found__span">
           Error 404. Not a found
         </span>
-        <a href="#">Вернуться на главную</a>
+        <Link to='/'>Вернуться на главную</Link>
       </div>
     </section>
   );

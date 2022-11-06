@@ -1,20 +1,24 @@
-import { AppCard } from '../../components/app-card';
+import { Helmet } from 'react-helmet-async';
+import { PlaceCardInfo, City} from '../../types/index';
+import ListOffers from '../../components/ListOffers/ListOffers';
+import Logo from '../../components/Logo/Logo';
 
 type MainProps = {
-  AmountRent: number;
+  city: City;
+  rentalOffers: number;
+  places: PlaceCardInfo[];
 }
 
-export function Main({AmountRent}: MainProps): JSX.Element{
+export function Main({city, rentalOffers, places}: MainProps): JSX.Element{
   return (
     <body className="page page--gray page--main">
+      <Helmet>
+        <title>Six cities simple: Main</title>
+      </Helmet>
       <header className="header">
         <div className="container">
           <div className="header__wrapper">
-            <div className="header__left">
-              <a className="header__logo-link header__logo-link--active">
-                <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
-              </a>
-            </div>
+            <Logo />
             <nav className="header__nav">
               <ul className="header__nav-list">
                 <li className="header__nav-item user">
@@ -93,11 +97,7 @@ export function Main({AmountRent}: MainProps): JSX.Element{
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <AppCard />
-                <AppCard />
-                <AppCard />
-                <AppCard />
-                <AppCard />
+                <ListOffers places={places}/>
               </div>
             </section>
             <div className="cities__right-section">
