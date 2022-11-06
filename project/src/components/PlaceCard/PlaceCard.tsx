@@ -6,15 +6,13 @@ type PlaceCardProps = {
   offer: PlaceCardInfo;
 };
 
-export function AppCard({ offer }: PlaceCardProps): JSX.Element {
-  const { id, isPremium, imageSrc, imageAlt, price, rating, name, type} = offer;
-  const [activeCardId, setActiveCardId] = useState(0);
+export function PlaceCard({ offer }: PlaceCardProps): JSX.Element {
+  const {isPremium, imageSrc, imageAlt, price, rating, name, type} = offer;
+  const [activeCardId] = useState(0);
 
   return (
     <article
       className="cities__card place-card"
-      onMouseEnter={() => setActiveCardId(id)}
-      onMouseLeave={() => setActiveCardId(0)}
     >
       {isPremium &&
       <div className="place-card__mark">
